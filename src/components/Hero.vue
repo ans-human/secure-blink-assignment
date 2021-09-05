@@ -40,19 +40,22 @@ export default {
     }
     ul{    
         list-style: none;
-        background-image: url("assets/logo.png");
+        background-image: url("~@/assets/dot_background.svg");
     }
     ul li{
-        padding: 1rem 1rem;
-        margin: 1rem;
+        padding: 2rem;
+        margin: 0 1rem;
+        text-align: left;
     }
     ul li p{
+        font-size: 1.5rem;
         font-weight: bold;
         color: gray;
     }
     ul li h1{
         border-bottom:5px solid #00D768;
         display: inline;
+        font-size: 3rem;
     }
     .hero{
         text-align: left;
