@@ -37,18 +37,22 @@ export default {
     * {
         margin: 0;
         padding: 0;
+        max-width: 100%;
+        overflow-x: hidden;
     }
+    
     ul{    
         list-style: none;
         background-image: url("~@/assets/dot_background.svg");
+        padding: 2rem 0;
     }
     ul li{
-        padding: 2rem;
-        margin: 0 1rem;
-        text-align: left;
+        padding: 1.5rem 0rem;
+        margin: 0 3rem;
+        text-align: center;
     }
     ul li p{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: bold;
         color: gray;
     }
@@ -62,7 +66,7 @@ export default {
         background: #01CB63;
         display: grid;
         grid-template-rows: auto-fit 1fr 1fr;
-        max-height: MediaQuery.of(context).size.width * 0.65;
+        /* max-height: MediaQuery.of(context).size.width * 0.65; */
         grid-area:   
             "image"
             "text";
@@ -70,17 +74,20 @@ export default {
     }
     
     .hero .text{
+        /* border: 2px solid red; */
         grid-area: "text";
         padding: 2rem;
     }
     .hero .image{
         object-fit: cover;
-        min-height: 100%;
+        height: 100%;
         width: 100%;
         grid-area: "image";
         opacity: 65%;
-        background: #00D768;
-        background-image: linear-gradient(#01CB63, #00D768);
+        /* background: #00D768; */
+        /* mix-blend-mode: multiply; */
+        background: transparent url('/assets/Rectangle_25.svg') 0% 0% no-repeat padding-box;
+        /* background-image: transparent linear-gradient(#01CB63, #00D768); */
     }
     .hero .big-text{
         color: white;
@@ -123,10 +130,10 @@ export default {
         ul{
         display: flex;
         align-items: stretch; /* Default */
-        justify-content: space-evenly;
+        justify-content: space-around;
         width: 100%;
         list-style: none;
-        text-align: center;
+        /* text-align: center; */
         /* justify-content: space-around; */
     }
     }

@@ -2,18 +2,31 @@
   <Navbar/>
   <Hero/>
   <Courses/>
+  <TopEarners/>
+  <Refer/>
+  <Testimonials/>
+  <Contact/>
 </template>
 
 <script>
 import Navbar from './components/Navbar.vue'
 import Hero from './components/Hero.vue'
 import Courses from './components/Courses.vue'
+import TopEarners from './components/TopEarners.vue'
+import Refer from './components/Refer.vue'
+import Testimonials from './components/Testimonials.vue'
+import Contact from './components/Contact.vue'
+
 export default {
   name: 'App',
   components: {
     Navbar,
     Hero,
     Courses,
+    TopEarners,
+    Refer,
+    Testimonials,
+    Contact,
   }
 }
 </script>

@@ -20,13 +20,14 @@ export default {
 <style scoped> 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
   .navbar {
-    padding: 16px 10px;
+    margin: 0 2rem;
+    padding: 1rem 0;
     background: white;
   }
   nav {
     display: flex;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
   }
   nav img {
@@ -53,7 +54,7 @@ export default {
   }
   .primary{
     background-color: #01CB63;
-    box-shadow: 0px 1px 5px #848d88;
+    box-shadow: 0px 5px 15px #01CB6359;
     font-style: italic;
     color: white;
   } 
@@ -63,5 +64,15 @@ export default {
   }
   svg {
     font-family: Noto Sans, sans-serif;
+  }
+  @media(min-width: 768px) {
+    .navbar{
+      margin: 0 4rem;
+    }
+  }
+  @media(min-width: 1020px) {
+    .navbar{
+      margin: auto 6rem;
+    }
   }
 </style>

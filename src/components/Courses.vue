@@ -1,10 +1,10 @@
 <template>
-  <section class="section">
+  <section>
       <p>Courses</p>
       <h1>Our Most Popular Courses</h1>
       <ul id="array-rendering">
         <li v-for="card in cards" :key="card.title">
-            <course-card :card="card"></course-card>
+            <course-card class="card" :card="card"></course-card>
         </li>
       </ul>
   </section>
@@ -61,37 +61,55 @@ export default {
     *{
         margin: 0;
         padding: 0;
+        max-width: 100%;
     }
-    .section{
-        padding: 4rem 0rem;
-        justify-content: center;
+    section{
+        padding: 4rem 0rem 2rem 0;
     }
-    .section p{
+    section p{
         font-style: italic;
         color: #01CB63;
     }
-    .section h1{
+    section h1{
         font-weight: bold;
         font-size: 2rem;
     }
-    .section ul{
+    ul{ 
+        margin: 4rem;
         list-style: none;
-        /* display: grid; */
-        /* grid-template-rows: 1fr 1fr 1fr; */
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-rows: auto-fit 1fr 1fr 1fr;
     }
-    .section li{
-        margin: 1rem;
+    section li{
         justify-items: center;
     }
-    .section course-card{
+    section course-card{
         object-fit: cover;
         max-width: 300px;
     }
+    .card{
+        height: 100%;
+    }
     @media (min-width: 768px){
-        .section ul{
-            /* display: grid;
-            grid-template-columns: 1fr 1fr 1fr; */
+        
+        ul {
+            /* margin-left: 4rem; */
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            max-width: 100%;
         }
+    }
+    @media (min-width: 1020px) {
+        section {
+            margin-top: 2rem;
+        }
+        ul {
+            margin-left: 6rem;
+            margin-right: 6rem;
+            grid-gap: 3rem;
+        }
+        
     }
 
 </style>
