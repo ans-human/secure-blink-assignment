@@ -7,11 +7,11 @@
     <input type="email" placeholder="Email" v-model="email" required>
     <!-- <div v-if="nameError" class="error">{{ nameError }}</div> -->
 
-    <input type="phone" placeholder="Phone" v-model="phone" required>
+    <input type="tel" placeholder="Phone" v-model="phone" required>
     <div v-if="phoneError" class="error">{{ phoneError }}</div>
     
     <input type="subject" placeholder="Subject" v-model="subject" required>
-    <!-- <div v-if="passwordError" class="error">{{ passwordError }}</div> -->
+    <!-- <div v-if="phoneError" class="error">{{ phoneError }}</div> -->
 
     <input type="message" placeholder="Message" v-model="message" required>
 
@@ -31,17 +31,19 @@ export default {
       phone: '',
       subject: '',
       message: '',
+      phoneError: null,
     }
   },
   methods: {
     handleSubmit() {
-      // validate password
-      this.passwordError = this.password.length > 5 ?
-        '' : 'Password must be at least 6 characters long'
-      if (!this.passwordError) {
+      // validate phone number
+      this.phoneError = this.phone.length !== 10 ?
+        '' : 'phone must be at least 10 characters long'
+      console.log(phone)
+      if (!this.phoneError) {
         // make request to database to save user
         console.log('email: ', this.email)
-        console.log('password: ', this.password)
+        console.log('phone: ', this.phone)
         console.log('role: ', this.role)
         console.log('skills: ', this.skills)
         console.log('terms accepted: ', this.terms)
@@ -83,6 +85,7 @@ export default {
         font-weight: bold;
     }
     .submit button{
+        cursor: pointer;
         margin: 1rem;
         font-family: Noto Sans, sans-serif;
         font-style: italic;
@@ -112,7 +115,7 @@ export default {
             grid-column: 2 ;
             grid-row: 2;
         }
-        input[type="phone"]{
+        input[type="tel"]{
             grid-column: 1;
             grid-row: 3;
         }
