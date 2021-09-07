@@ -1,4 +1,4 @@
-# reacton-timer
+# vue js landing page
 
 ## Project setup
 ```
