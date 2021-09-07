@@ -52,11 +52,8 @@ export default {
         list-style: none;
         width: 100%; 
 	    margin-left: auto; 
-	    margin-right: auto; 
+	    margin-right: auto;  
         display: inline-block;
-    }
-    li {
-        /* margin: 0 1rem; */
     }
     .sec{
         margin-top: 1rem;
@@ -76,6 +73,7 @@ export default {
         color: #201F23;
     }
     .info {
+        margin-left: 2rem;
         display: flex;
         align-items: center;
         /* justify-content: center; */
@@ -123,7 +121,11 @@ export default {
             grid-column: 1 / span 4;
             grid-row: 8 / span 12;
         }
+            .info {
+                margin: 0;
+            }
     }
+    
     @media(min-width: 1200px){
         
     }
