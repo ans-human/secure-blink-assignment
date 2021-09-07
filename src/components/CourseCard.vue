@@ -30,7 +30,7 @@
 export default {
     name: 'CourseCard',
     data(){
-        console.log(this.card)
+        // console.log(this.card)
         return{
             image: '@/assets/' + this.card.img, 
         }

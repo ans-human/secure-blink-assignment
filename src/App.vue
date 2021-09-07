@@ -6,6 +6,7 @@
   <Refer/>
   <Testimonials/>
   <Contact/>
+  <Footer/>
 </template>
 
 <script>
@@ -15,8 +16,8 @@ import Courses from './components/Courses.vue'
 import TopEarners from './components/TopEarners.vue'
 import Refer from './components/Refer.vue'
 import Testimonials from './components/Testimonials.vue'
-import Contact from './components/Contact.vue'
-
+import Contact from './components/Contact.vue'  
+import Footer from './components/Footer.vue'  
 export default {
   name: 'App',
   components: {
@@ -27,6 +28,7 @@ export default {
     Refer,
     Testimonials,
     Contact,
+    Footer,
   }
 }
 </script>

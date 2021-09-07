@@ -42,7 +42,7 @@ export default {
                     q : 'It\'s a comprehensive online learning platform for everyone looking to learn and course pro. provinding this platform which is very beneficial for practicals. Students can revise everything at home like dissection and slides',
                     author: 'Rajkumar Jain',
                     time: 'Yesterday',
-                    image: 'e1.png'
+                    image: 'e2.png'
                 }
             ]
         }
